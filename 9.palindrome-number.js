@@ -38,18 +38,13 @@ var isPalindrome = function(x) {
     let s = x.toString();
     let res = "";
 
-    for (let i=s.length-1; i>=0; i--) { 
-        console.log("Char At:", s.charAt(i));
-               
+    for (let i=s.length-1; i>=0; i--) {                
         res += s.charAt(i);
     }
 
-    if (res === s) {
-
-        return true;
-    }
+    if (res === s) return true;
+    
     return false;
-      
 };
 
 console.log(isPalindrome(121));  // True
