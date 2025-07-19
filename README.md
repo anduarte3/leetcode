@@ -1,6 +1,5 @@
-# leetcode-exercises
+# Solutions to leetcode problems
 
-Solutions to leetcode problems
 ---
 
 | Problem | Solution | Difficulty |
