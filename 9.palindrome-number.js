@@ -35,18 +35,19 @@ Follow up: Could you solve it without converting the integer to a string?
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    let s = x.toString();
-    let res = "";
+    let n = x
+    let d = 0;
+    let res = 0;
 
-    for (let i=s.length-1; i>=0; i--) {                
-        res += s.charAt(i);
+    if (x < 0) return false;
+
+    while (n) {
+        d = n % 10;        
+        res = (res * 10) + d;
+        n = Math.floor(n / 10)
     }
-
-    if (res === s) return true;
+        
+    if (res == x) return true;
     
     return false;
 };
-
-console.log(isPalindrome(121));  // True
-console.log(isPalindrome(-121));  // False
-console.log(isPalindrome(10));  // False
