@@ -29,5 +29,35 @@ Constraints:
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
+    let s = "";
+    let arr = [];
+    let min = strs[0].length;
+    let char = "";
+    let res = "";
+
+    if (strs.length === 0) return "";
+
+    for (let i=0; i<strs.length; i++) {
+        s = strs[i].split("");
+        arr.push(s);
+
+        if (strs[i].length < min) min = strs[i].length;
+    }
     
+    // For the first letter, travail through all the words
+    // j = letters ; i = words
+    for (let j=0; j<min; j++) {
+        char = arr[0][j];
+        for (let i=1; i<arr.length; i++) { 
+            if (arr[i][j] !== char) {
+                return res;  
+            } 
+        }
+        res += char;
+    }
+    
+    return res;
 };
+
+console.log(longestCommonPrefix(["flower","flow","flight"]));
+console.log(longestCommonPrefix(["dog","racecar","car"]));
