@@ -1,4 +1,4 @@
-# leetcode problems
+# Solved problems
 
 ---
 
